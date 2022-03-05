@@ -4,6 +4,35 @@ import no.hvl.dat110.common.TODO;
 
 public class PublishMsg extends Message {
 	
+	private String topic;
+	private String message;
+	
+	
+	
+	public PublishMsg(String name, String topic, String message) {
+		super(MessageType.PUBLISH, name);
+		this.topic = topic;
+		this.message = message;
+	}
+	
+	public void setTopic(String topic) {
+		this.topic = topic;
+	}
+
+	public String getTopic() {
+		return topic;
+	}
+	
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+
+	@Override
+	public String toString() {
+		return "PublishMessage Topic = " + topic + ", type = " + getType() + ", user = " + getUser() + ", message = " + message;
+	}
+	
 	// message sent from client to create publish a message on a topic 
 
 	// TODO:
@@ -14,6 +43,6 @@ public class PublishMsg extends Message {
 	
 	public String getMessage() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return message;
 	}
 }
