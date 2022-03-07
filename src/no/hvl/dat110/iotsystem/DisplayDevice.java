@@ -36,6 +36,7 @@ public class DisplayDevice {
 		}
 		
 		// - unsubscribe from the topic
+		
 		client.unsubscribe(Common.TEMPTOPIC);
 		
 		// - disconnect from the broker
